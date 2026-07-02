@@ -1,0 +1,6 @@
+{
+  "name": "Developer Portfolio",
+  "description": "An interactive, ultra-polished developer portfolio featuring bold typography, glassmorphism UI, interactive works showcase, and a real-time clock.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
