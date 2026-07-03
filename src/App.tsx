@@ -266,7 +266,7 @@ export default function App() {
           {/* Tab Navigation Menu */}
           <nav 
             id="main-navigation"
-            className="glass px-5 py-2 rounded-full flex gap-4 sm:gap-6 md:gap-8 text-[10px] sm:text-xs font-semibold uppercase tracking-widest"
+            className="glass glass-strong px-5 py-2 rounded-full flex gap-4 sm:gap-6 md:gap-8 text-[10px] sm:text-xs font-semibold uppercase tracking-widest"
           >
             {(['works', 'experience', 'about', 'contact'] as const).map((tab) => (
               <button
@@ -315,11 +315,30 @@ export default function App() {
                 <h2 className="text-xs uppercase tracking-[0.4em] mb-4 text-[#7C3AED] font-black">
                   Digital Architect & Developer
                 </h2>
-                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[100px] xl:text-[110px] font-black leading-[0.85] tracking-tighter mb-10 select-none">
+                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[100px] xl:text-[110px] font-black leading-[0.85] tracking-tighter mb-6 select-none">
                   CRAFTING<br />
                   <span className="text-outline">IMMERSIVE</span><br />
                   <span className="accent-gradient">REALITIES.</span>
                 </h1>
+                <p className="max-w-2xl text-sm sm:text-base text-gray-300 leading-7 mb-8">
+                  Building soft, luminous interfaces with tactile glassmorphism, motion-rich micro-interactions, and responsive UI systems that feel sculpted in code.
+                </p>
+                <div className="flex flex-wrap gap-3 mb-10">
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('contact')}
+                    className="button-morph rounded-full px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-white shadow-2xl transition-all hover:scale-[1.01]"
+                  >
+                    LET'S CONNECT
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('experience')}
+                    className="glass-soft rounded-full px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-gray-200 hover:text-white transition-all"
+                  >
+                    VIEW EXPERIENCE
+                  </button>
+                </div>
 
                 {/* Interactive Metric Cards */}
                 <div id="metrics-container" className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-xl">
@@ -333,7 +352,7 @@ export default function App() {
                       id={`metric-card-${i}`}
                       onMouseEnter={() => setHoveredMetric(metric.label)}
                       onMouseLeave={() => setHoveredMetric(null)}
-                      className="glass rounded-xl p-3 sm:p-5 flex flex-col justify-center relative cursor-help transform transition-all duration-300 hover:-translate-y-1"
+                      className="glass-soft rounded-[32px] p-4 sm:p-5 flex flex-col justify-center relative cursor-help transform transition-all duration-300 hover:-translate-y-1"
                     >
                       <span className="text-2xl sm:text-4xl font-black text-[#7C3AED]">{metric.number}</span>
                       <span className="text-[9px] sm:text-[11px] uppercase opacity-60 tracking-widest font-bold mt-1">{metric.label}</span>
@@ -355,9 +374,9 @@ export default function App() {
                 {/* 1. Featured Project Card (Carousel) */}
                 <div 
                   id={`project-card-${currentProject.id}`}
-                  className="glass rounded-2xl p-6 relative overflow-hidden group border border-white/10"
+                  className="glass-soft rounded-[40px] p-6 relative overflow-hidden group border border-white/10"
                 >
-                  <div className="absolute top-4 right-4 text-[9px] text-[#7C3AED] font-mono tracking-widest font-black uppercase bg-[#7C3AED]/10 px-2 py-1 rounded">
+                  <div className="absolute top-4 right-4 text-[9px] text-[#7C3AED] font-mono tracking-widest font-black uppercase bg-[#7C3AED]/12 px-2 py-1 rounded-full backdrop-blur-sm">
                     {currentProject.category}
                   </div>
                   
