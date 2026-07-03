@@ -315,6 +315,13 @@ export default function App() {
                 <h2 className="text-xs uppercase tracking-[0.4em] mb-4 text-[#7C3AED] font-black">
                   Digital Architect & Developer
                 </h2>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {['UX Systems', 'Glassmorphism', 'Motion-led', 'Responsive'].map((tag) => (
+                    <span key={tag} className="hero-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
                 <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[100px] xl:text-[110px] font-black leading-[0.85] tracking-tighter mb-6 select-none">
                   CRAFTING<br />
                   <span className="text-outline">IMMERSIVE</span><br />
@@ -338,6 +345,24 @@ export default function App() {
                   >
                     VIEW EXPERIENCE
                   </button>
+                </div>
+
+                <div className="code-panel glass-soft rounded-[32px] p-5 border border-white/10 shadow-[0_35px_80px_rgba(0,0,0,0.22)] mb-10 overflow-hidden">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-2">
+                      <span className="h-2 w-2 rounded-full bg-[#f97316]" />
+                      <span className="h-2 w-2 rounded-full bg-[#facc15]" />
+                      <span className="h-2 w-2 rounded-full bg-[#34d399]" />
+                    </div>
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400">CODE PREVIEW</span>
+                  </div>
+                  <div className="space-y-2 text-[11px] font-mono text-gray-300">
+                    <div className="code-line"><span className="code-key">const</span> <span className="code-var">heroTheme</span> = <span className="code-value">{'{'}</span></div>
+                    <div className="code-line indent-1"><span className="code-key">background</span>: <span className="code-value">'glassy'</span>,</div>
+                    <div className="code-line indent-1"><span className="code-key">interaction</span>: <span className="code-value">'morph'</span>,</div>
+                    <div className="code-line indent-1"><span className="code-key">motion</span>: <span className="code-value">'fluid'</span></div>
+                    <div className="code-line"><span className="code-value">{'}'}</span>;</div>
+                  </div>
                 </div>
 
                 {/* Interactive Metric Cards */}
@@ -374,7 +399,7 @@ export default function App() {
                 {/* 1. Featured Project Card (Carousel) */}
                 <div 
                   id={`project-card-${currentProject.id}`}
-                  className="glass-soft rounded-[40px] p-6 relative overflow-hidden group border border-white/10"
+                  className="glass-strong rounded-[40px] p-6 relative overflow-hidden group border border-white/10"
                 >
                   <div className="absolute top-4 right-4 text-[9px] text-[#7C3AED] font-mono tracking-widest font-black uppercase bg-[#7C3AED]/12 px-2 py-1 rounded-full backdrop-blur-sm">
                     {currentProject.category}

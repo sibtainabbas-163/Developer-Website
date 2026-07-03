@@ -66,3 +66,51 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(124, 58, 237, 0.5);
 }
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(124, 58, 237, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  color: #d8b4fe;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.625rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.button-morph {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.28), rgba(59, 130, 246, 0.18));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 45px rgba(124, 58, 237, 0.16);
+  backdrop-filter: blur(18px);
+}
+
+.code-panel {
+  background: rgba(11, 8, 22, 0.82);
+  border: 1px solid rgba(124, 58, 237, 0.16);
+  box-shadow: 0 25px 75px rgba(0, 0, 0, 0.3);
+}
+
+.code-line {
+  display: block;
+}
+
+.code-line.indent-1 {
+  padding-left: 1rem;
+}
+
+.code-key {
+  color: #38bdf8;
+}
+
+.code-var {
+  color: #f97316;
+}
+
+.code-value {
+  color: #a78bfa;
+}
